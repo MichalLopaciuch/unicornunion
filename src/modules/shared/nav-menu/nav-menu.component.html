@@ -1,68 +1,39 @@
-<!--Navbar-->
-<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark unique-color" [containerInside]="false">
+<nav class="navbar navbar-expand-lg  navbar-light " style="background-color: #616161;">
 
-    <!-- Navbar brand -->
-    <mdb-navbar-brand><a class="navbar-brand" href="#">Navbar</a></mdb-navbar-brand>
-  
-    <!-- Collapsible content -->
-    <links>
-  
-      <!-- Links -->
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link waves-light" mdbWavesEffect>Home<span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link waves-light" mdbWavesEffect>Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link waves-light" mdbWavesEffect>Pricing</a>
-        </li>
-  
-        <!-- Dropdown -->
-        <li class="nav-item dropdown" dropdown>
-          <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
-            Basic dropdown<span class="caret"></span></a>
-          <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
-            <a class="dropdown-item waves-light" mdbWavesEffect href="#">Action</a>
-            <a class="dropdown-item waves-light" mdbWavesEffect href="#">Another action</a>
-            <a class="dropdown-item waves-light" mdbWavesEffect href="#">Something else here</a>
-            <div class="divider dropdown-divider"></div>
-            <a class="dropdown-item waves-light" mdbWavesEffect href="#">Separated link</a>
-          </div>
-        </li>
-  
-      </ul>
-      <!-- Links -->
-  
-      <ul class="navbar-nav ml-auto nav-flex-icons">
-        <li class="nav-item">
-          <a class="nav-link">
-            <mdb-icon fab icon="twitter"></mdb-icon>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link">
-            <mdb-icon fab icon="google-plus"></mdb-icon>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link">
-            <div class="btn-group" mdbDropdown>
-              <mdb-icon fas icon="user" mdbDropdownToggle></mdb-icon>
-              <div class="dropdown-menu dropdown-menu-right dropdown-primary">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
-                <div class="divider dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Separated link</a>
-              </div>
-            </div>
-          </a>
-        </li>
-      </ul>
-    </links>
-    <!-- Collapsible content -->
-  
-  </mdb-navbar>
-  <!--/.Navbar-->
+  <div class="container-fluid">
+ <a [routerLink]="['/']" class="navbar-brand">Cost managament app</a>
+
+    <ul class="navbar-nav">
+
+      <!-- Avatar -->
+      <li mdbDropdown class="nav-item dropstart  ">
+        <a
+          class="nav-link dropdown-toggle   d-flex align-items-center"
+          id="navbarDropdownMenuLink"
+          role="button"
+          mdbDropdownToggle
+          aria-expanded="false"
+        >
+          <img
+            src="https://mdbootstrap.com/img/Photos/Avatars/img (31).webp"
+            class="rounded-circle"
+            height="22"
+            alt=""
+            loading="lazy"
+          />
+        </a>
+        <ul mdbDropdownMenu class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <li>
+            <a class="dropdown-item" [routerLink]="['/calendar']">Mój kalendarz</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#">Settings</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#">Logout</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>

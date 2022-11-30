@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { MdbCheckboxModule } from 'mdb-angular-ui-kit/checkbox';
 import { AdminPanelModule } from 'src/modules/admin-panel/admin-panel.module';
 import { CalendarModule } from 'src/modules/calendar/calendar.module';
 import { SharedModule } from 'src/modules/shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent
@@ -14,11 +14,11 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MdbCheckboxModule,
     CalendarModule,
-    AdminPanelModule,
+    AdminPanelModule,BrowserAnimationsModule,
     AppRoutingModule,
-    SharedModule
+    SharedModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
