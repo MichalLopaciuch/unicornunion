@@ -4,9 +4,13 @@
  <a [routerLink]="['/']" class="navbar-brand">Cost managament app</a>
 
     <ul class="navbar-nav">
-
+      <li *ngIf="!isLoggedIn" class="nav-item" [routerLinkActive]="['link-active']">
+        <a class="nav-link text-dark" [routerLink]="['/login']">
+         Login
+        </a>
+      </li>
       <!-- Avatar -->
-      <li mdbDropdown class="nav-item dropstart  ">
+      <li mdbDropdown class="nav-item dropstart  " *ngIf="isLoggedIn">
         <a
           class="nav-link dropdown-toggle   d-flex align-items-center"
           id="navbarDropdownMenuLink"
@@ -22,15 +26,15 @@
             loading="lazy"
           />
         </a>
-        <ul mdbDropdownMenu class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <li>
+        <ul mdbDropdownMenu class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
+          <li class="nav-item" [routerLinkActive]="['link-active']">
             <a class="dropdown-item" [routerLink]="['/calendar']">Mój kalendarz</a>
           </li>
-          <li>
-            <a class="dropdown-item" href="#">Settings</a>
+          <li class="nav-item" [routerLinkActive]="['link-active']">
+            <a class="dropdown-item" [routerLink]="['/adminPanel']">Panel administracyjny</a>
           </li>
-          <li>
-            <a class="dropdown-item" href="#">Logout</a>
+          <li class="nav-item" [routerLinkActive]="['link-active']">
+            <a  class="dropdown-item" (click)="logout()">Logout</a>
           </li>
         </ul>
       </li>

@@ -1,1 +1,31 @@
-<p>login-page works!</p>
+<div class="container mt-5">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-md-8 align-middle">
+        <div class="card">
+          <div class="card-header">Login</div>
+          <div class="card-body">
+            <form id="loginForm" [formGroup]="loginForm"  (submit)="login()">
+              <div class="form-group row">
+                <label for="text" class="col-md-4 col-form-label text-md-right">Nazwa użytkownika</label>
+                <div class="col-md-6">
+                  <input type="text" [formControl]="f.email" #email id="email" name="email" class="form-control" />
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="password" class="col-md-4 col-form-label text-md-right">Hasło</label>
+  
+                <div class="col-md-6">
+                  <input type="password" [formControl]="f.password" class="form-control" #password id="password" name="password" />
+                </div>
+              </div>
+              <div class="form-group row mb-0 justify-content-center">
+                <div class="col-md-8 offset-md-4">
+                  <button (click)="login()" class="btn btn-primary login_btn">Zaloguj</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
